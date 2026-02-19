@@ -147,6 +147,9 @@ We follow a 70/20/10 testing pyramid for optimal balance of speed and coverage:
 - Logical components informationally independent
 - Components don't share common information after interaction
 - All needed common information is shared during interaction
+- Too much abstraction leads to highly broad overarching forms of ordered structures
+- This makes code too rigid and difficult to undo when components heavily depend on this order
+- Premature abstraction is abstracting without reason or proper understanding of concept and its context
 
 ## Environment Variables
 
