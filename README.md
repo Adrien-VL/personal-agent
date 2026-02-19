@@ -132,6 +132,22 @@ We follow a 70/20/10 testing pyramid for optimal balance of speed and coverage:
 - Debugging should be straightforward
 - Convention over configuration where it makes sense
 
+### Abstraction and Occam's Razor
+- Abstract only to the level needed, nothing more
+- Lack of abstraction creates disordered mess between components
+- Requires additional useless code that doesn't address core problem
+- Abstraction only when it removes redundant code
+- Behavior must be identical and will not change
+- Abstraction must be easier to replace/remove than what it abstracted
+- Can be replaced by another if it aids this (not if there's strong reason against)
+- Follow least degree of freedom
+- Makes it easier to understand what things do vs what they could theoretically do
+- Reduces cognitive load and potential for misunderstanding dangers
+- Living and evolving code with minimal resistance
+- Logical components informationally independent
+- Components don't share common information after interaction
+- All needed common information is shared during interaction
+
 ## Environment Variables
 
 - `ZAI_API_KEY`: Required for integration and e2e tests (Z.AI API key)
