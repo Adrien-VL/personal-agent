@@ -29,6 +29,30 @@ tests/
     └── test_e2e.py
 ```
 
+## Directory Structure
+
+```
+personal-agent/
+├── agent/
+│   ├── sources/            # Model provider implementations
+│   │   └── glm.py       # Z.AI GLM provider
+│   ├── enhancers/          # Future: Shell context enhancer implementations
+│   │   └── *.py         # RAG, web search, persistent memory
+│   ├── processors/          # Future: Shell response processors
+│   │   └── *.py         # Output transformations, formatting
+│   ├── model.py           # BaseModel abstract class and dataclasses
+│   ├── ghost.py           # Internal processing engine
+│   └── shell.py           # Sensory/motor layer
+├── tests/                 # Testing infrastructure
+├── knowledge/             # Knowledge base documents
+├── main.py               # CLI entry point
+└── pyproject.toml         # Project configuration
+```
+
+**Future Directories:**
+- `agent/enhancers/` - Context enhancer implementations (similar to `sources/`)
+- `agent/processors/` - Response processor implementations (similar to `sources/`)
+
 ## Testing Pyramid
 
 We follow a 70/20/10 testing pyramid for optimal balance of speed and coverage:
